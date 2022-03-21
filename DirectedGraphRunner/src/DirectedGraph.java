@@ -24,7 +24,6 @@ public class DirectedGraph {
 
         var correctResult = new ArrayList<String>();
         if (optimal[end - 1] != Integer.MIN_VALUE) {
-            correctResult.add("Y");
             var pathBuilder = new StringBuilder();
             for (var node : Arrays.stream(path).distinct().toArray())
                 if (node != -1)
@@ -32,8 +31,6 @@ public class DirectedGraph {
             correctResult.add(pathBuilder.toString());
             correctResult.add(Integer.toString(optimal[end - 1]));
         }
-        else
-            correctResult.add("N");
 
         return correctResult.toArray(new String[0]);
     }

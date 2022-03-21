@@ -23,7 +23,13 @@ public class Main {
             var result = graph.getMaxPath(start, end);
 
             FileWriter writer = new FileWriter("output.txt");
-            writer.write(String.join("\n", result));
+            if (result.length != 0) {
+                writer.write("Y\n");
+                writer.write(String.join("\n", result));
+            }
+            else
+                writer.write("N");
+
             writer.close();
         } catch (FileNotFoundException e) {
             System.out.println("File not found...");
