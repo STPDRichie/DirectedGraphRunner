@@ -20,12 +20,10 @@ public class Main {
 
             var start = Integer.parseInt(scanner.nextLine());
             var end = Integer.parseInt(scanner.nextLine());
-//            var result = graph.getMaxPath(start, end);
-            var resultCost = graph.getMaxPathCost(start, end);
+            var result = graph.getMaxPath(start, end);
 
             FileWriter writer = new FileWriter("output.txt");
-//            writer.write(String.join("\n", result));
-            writer.write(Integer.toString(resultCost));
+            writer.write(String.join("\n", result));
             writer.close();
         } catch (FileNotFoundException e) {
             System.out.println("File not found...");
