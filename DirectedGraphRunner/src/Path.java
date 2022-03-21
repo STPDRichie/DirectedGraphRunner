@@ -1,12 +1,12 @@
-public class SinglyLinkedList {
+public class Path {
     public final int node;
-    public final SinglyLinkedList previous;
+    public final Path previous;
     public final int length;
 
     public final int[] path;
     public final int weight;
 
-    public SinglyLinkedList(int node, SinglyLinkedList previous, int weight) {
+    public Path(int node, Path previous, int weight) {
         this.node = node;
         this.previous = previous;
         this.length = (previous != null) ? previous.length + 1 : 1;
